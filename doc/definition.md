@@ -23,7 +23,7 @@ Airbnb社の[JavaScript Style Guide](https://github.com/airbnb/javascript)を採
 * すべてのルール定義について、不正なキーが存在しない
 * Airbnbが定義したルールと同じ値を再定義しない
 
-ほか、詳細なテスト内容については[テストスクリプト](test/check-rule.js)を参照してください。
+ほか、詳細なテスト内容については[テストスクリプト](../test/check-rule.js)を参照してください。
 
 ## Airbnb JavaScript Style Guide
 
@@ -44,9 +44,9 @@ intra-mart開発に合わせて、主に以下の点に関してルールの変�
 
 Note: 以下の一覧は`npm run markdown`によって自動生成されています。手動での編集はしないでください。
 
-* [Airbnbとの相違点](doc/diff.md)
-* [未採用のルール](doc/exclude.md)
-* [すべてのルール](doc/all-rules.md)
+* [Airbnbとの相違点](./diff.md)
+* [未採用のルール](./exclude.md)
+* [すべてのルール](./all-rules.md)
 
 ### 特筆すべき変更内容
 

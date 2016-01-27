@@ -2,6 +2,10 @@
 
 intra-mart開発のための[ESLint](http://eslint.org/)設定
 
+## ルール内容
+
+[ルール内容はこちら](./doc/definition.md)
+
 ## インストールと使用
 
 この設定は[ESLint Shareable Configs](http://eslint.org/docs/developer-guide/shareable-configs)の仕組みで提供されています。
