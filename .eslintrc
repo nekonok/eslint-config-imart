@@ -1,0 +1,12 @@
+// vim: set ft=json ff=unix:
+{
+  "extends": "imart",
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "ecmaFeatures": {
+    "modules": false
+  }
+}

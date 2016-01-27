@@ -1,0 +1,39 @@
+{
+  "name": "eslint-config-imart",
+  "version": "0.0.3",
+  "description": "Definition of ESLint rules and intra-mart JavaScript API",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./lib/build-globals.js",
+    "markdown": "node ./lib/build-markdown.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k-kono/eslint-config-imart"
+  },
+  "keywords": [
+    "eslintconfig"
+  ],
+  "author": "kouno.kenji",
+  "license": "MIT",
+  "config": {
+    "engine-strict": true
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "dependencies": {
+    "eslint": "1.4.3",
+    "eslint-config-airbnb": "0.0.8"
+  },
+  "devDependencies": {
+    "q": "^1.4.1",
+    "lodash": "^3.10.1",
+    "mocha": "^2.3.2",
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
+    "chai-things": "^0.2.0",
+    "cheerio-httpcli": "^0.3.3"
+  }
+}
