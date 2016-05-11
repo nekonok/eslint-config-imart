@@ -55,7 +55,9 @@ module.exports = {
     'no-useless-concat': 2,                    // http://eslint.org/docs/rules/no-useless-concat
     'object-curly-spacing': [2, 'always'],     // http://eslint.org/docs/rules/object-curly-spacing
     'operator-linebreak': [2, 'after'],        // http://eslint.org/docs/rules/operator-linebreak
-    'space-before-keywords': 2,                // http://eslint.org/docs/rules/space-before-keywords
+    'keyword-spacing': [2, {                   // http://eslint.org/docs/rules/keyword-spacing
+      'before': true
+    }],
     'space-in-parens': [2, 'never'],           // http://eslint.org/docs/rules/space-in-parens
     'space-unary-ops': [2, {                   // http://eslint.org/docs/rules/space-unary-ops
       'words': true,
