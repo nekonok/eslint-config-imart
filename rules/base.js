@@ -32,10 +32,12 @@ module.exports = {
     // Best practices
     'curly': [2, 'all'],             // http://eslint.org/docs/rules/curly
     'dot-location': [2, 'property'], // http://eslint.org/docs/rules/dot-location
-    'no-empty-label': 2,             // http://eslint.org/docs/rules/no-empty-label
     'no-implicit-coercion': 2,       // http://eslint.org/docs/rules/no-implicit-coercion
     'no-iterator': 2,                // http://eslint.org/docs/rules/no-iterator
-    'no-labels': 1,                  // http://eslint.org/docs/rules/no-labels
+    'no-labels': [1, {               // http://eslint.org/docs/rules/no-labels
+      'allowLoop': true,
+      'allowSwitch': true
+    }],
     'no-negated-condition': 2,       // http://eslint.org/docs/rules/no-negated-condition
 
     // Style
