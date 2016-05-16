@@ -9,7 +9,8 @@ expect = chai.expect;
 // requiring
 const _ = require('lodash');
 const eslintAllRules = require('eslint/conf/eslint.json').rules;
-const airbnbRules = require('eslint-config-airbnb/base').rules;
+const airbnbExtends = require('eslint-config-airbnb-base/legacy').extends;
+const airbnbRules = require('../lib/resolve-extends')(airbnbExtends);
 const base = require('../rules/base').rules;
 const exclude = require('../rules/exclude').rules;
 
