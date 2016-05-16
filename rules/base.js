@@ -50,14 +50,10 @@ module.exports = {
     'no-array-constructor': 2,                 // http://eslint.org/docs/rules/no-array-constructor
     'no-lonely-if': 2,                         // http://eslint.org/docs/rules/no-lonely-if
     'no-mixed-spaces-and-tabs': 2,             // http://eslint.org/docs/rules/no-mixed-spaces-and-tabs
-    'no-extra-parens': [2, 'all'],             // http://eslint.org/docs/rules/no-extra-parens
     'no-unneeded-ternary': 2,                  // http://eslint.org/docs/rules/no-unneeded-ternary
     'no-useless-concat': 2,                    // http://eslint.org/docs/rules/no-useless-concat
     'object-curly-spacing': [2, 'always'],     // http://eslint.org/docs/rules/object-curly-spacing
     'operator-linebreak': [2, 'after'],        // http://eslint.org/docs/rules/operator-linebreak
-    'keyword-spacing': [2, {                   // http://eslint.org/docs/rules/keyword-spacing
-      'before': true
-    }],
     'space-in-parens': [2, 'never'],           // http://eslint.org/docs/rules/space-in-parens
     'space-unary-ops': [2, {                   // http://eslint.org/docs/rules/space-unary-ops
       'words': true,
