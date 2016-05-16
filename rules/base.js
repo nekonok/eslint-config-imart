@@ -1,8 +1,14 @@
 module.exports = {
   rules: {
     // ES6
-    'no-var': 0,       // http://eslint.org/docs/rules/no-var
-    'prefer-const': 0, // http://eslint.org/docs/rules/prefer-const
+    'no-var': 0,                  // http://eslint.org/docs/rules/no-var
+    'prefer-const': 0,            // http://eslint.org/docs/rules/prefer-const
+    'no-confusing-arrow': 2,      // http://eslint.org/docs/rules/no-confusing-arrow
+    'no-duplicate-imports': 2,    // http://eslint.org/docs/rules/no-duplicate-imports
+    'no-new-symbol': 2,           // http://eslint.org/docs/rules/no-new-symbol
+    'no-useless-computed-key': 2, // http://eslint.org/docs/rules/no-useless-computed-key
+    'no-useless-constructor': 2,  // http://eslint.org/docs/rules/no-useless-constructor
+    'arrow-body-style': 2,        // http://eslint.org/docs/rules/arrow-body-style
 
     // Variables
     'no-catch-shadow': 2,   // http://eslint.org/docs/rules/no-catch-shadow
@@ -16,18 +22,18 @@ module.exports = {
     }],
 
     // Possible errors
-    'comma-dangle': [2, 'never'],    // http://eslint.org/docs/rules/comma-dangle
-    'no-dupe-args': 2,               // http://eslint.org/docs/rules/no-dupe-args
-    'no-empty-character-class': 2,   // http://eslint.org/docs/rules/no-empty-character-class
-    'no-extra-boolean-cast': 2,      // http://eslint.org/docs/rules/no-extra-boolean-cast
-    'no-negated-in-lhs': 2,          // http://eslint.org/docs/rules/no-negated-in-lhs
-    'no-regex-spaces': 2,            // http://eslint.org/docs/rules/no-regex-spaces
-    'valid-jsdoc': [2, {             // http://eslint.org/docs/rules/valid-jsdoc
-      'requireParamDescription': false,
-      'requireReturnDescription': false
+    'comma-dangle': [2, 'never'],  // http://eslint.org/docs/rules/comma-dangle
+    'no-dupe-args': 2,             // http://eslint.org/docs/rules/no-dupe-args
+    'no-empty-character-class': 2, // http://eslint.org/docs/rules/no-empty-character-class
+    'no-extra-boolean-cast': 2,    // http://eslint.org/docs/rules/no-extra-boolean-cast
+    'no-negated-in-lhs': 2,        // http://eslint.org/docs/rules/no-negated-in-lhs
+    'no-regex-spaces': 2,          // http://eslint.org/docs/rules/no-regex-spaces
+    'valid-jsdoc': [2, {           // http://eslint.org/docs/rules/valid-jsdoc
+      'requireParamDescription':   false,
+      'requireReturnDescription':  false
     }],
-    'valid-typeof': 2,               // http://eslint.org/docs/rules/valid-typeof
-    'no-unexpected-multiline': 2,    // http://eslint.org/docs/rules/no-unexpected-multiline
+    'valid-typeof': 2,             // http://eslint.org/docs/rules/valid-typeof
+    'no-unexpected-multiline': 2,  // http://eslint.org/docs/rules/no-unexpected-multiline
 
     // Best practices
     'curly': [2, 'all'],             // http://eslint.org/docs/rules/curly
@@ -35,10 +41,12 @@ module.exports = {
     'no-implicit-coercion': 2,       // http://eslint.org/docs/rules/no-implicit-coercion
     'no-iterator': 2,                // http://eslint.org/docs/rules/no-iterator
     'no-labels': [1, {               // http://eslint.org/docs/rules/no-labels
-      'allowLoop': true,
-      'allowSwitch': true
+      'allowLoop':                   true,
+      'allowSwitch':                 true
     }],
     'no-negated-condition': 2,       // http://eslint.org/docs/rules/no-negated-condition
+    'strict': [2, 'function'],       // http://eslint.org/docs/rules/strict
+    'yield-star-spacing': 2,         // http://eslint.org/docs/rules/yield-star-spacing
 
     // Style
     'array-bracket-spacing': [2, 'never'],     // http://eslint.org/docs/rules/array-bracket-spacing

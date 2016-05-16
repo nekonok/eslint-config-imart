@@ -16,6 +16,12 @@ module.exports = {
     'prefer-template': 0,        // http://eslint.org/docs/rules/prefer-template
     'require-yield': 0,          // http://eslint.org/docs/rules/require-yield
     'no-empty-pattern': 0,       // http://eslint.org/docs/rules/no-empty-pattern
+    'no-restricted-globals': 0,  // http://eslint.org/docs/rules/no-restricted-globals
+    'no-restricted-imports': 0,  // http://eslint.org/docs/rules/no-restricted-imports
+    'prefer-rest-params': 0,     // http://eslint.org/docs/rules/prefer-rest-params
+    'sort-imports': 0,           // http://eslint.org/docs/rules/sort-imports
+    'template-curly-spacing': 0, // http://eslint.org/docs/rules/template-curly-spacing
+
 
     // Node.js and CommonJS
     'callback-return': 0,        // http://eslint.org/docs/rules/callback-return
