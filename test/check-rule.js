@@ -48,7 +48,7 @@ describe('My specified rules', () => {
   });
 
   it('should not contain invalid rules', () => {
-    var invalid = _.difference(_.keys(mentionedAllRules), _.keys(eslintAllRules));
+    var invalid = _.difference(_.filter(_.keys(mentionedAllRules), (rules) => rules.indexOf("/") === -1 ), _.keys(eslintAllRules));
     expect(invalid).to.be.empty;
   });
 
