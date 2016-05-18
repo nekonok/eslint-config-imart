@@ -1,12 +1,5 @@
 module.exports = {
   "globals": {
-    "Iframe": false, 
-    "IframeInfo": false, 
-    "IframeInfoPositionUpdate": false, 
-    "IframeInfoRegistration": false, 
-    "IframeInfoURLUpdate": false, 
-    "IframeItemSettingUpdate": false, 
-    "IframeRegistration": false, 
     "iac_addressbook": false, 
     "iac_announce": false, 
     "iac_caldav_schedule": false, 

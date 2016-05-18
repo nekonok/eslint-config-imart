@@ -17,12 +17,14 @@ module.exports = {
     "imuiAlert": false, 
     "imuiConfirm": false, 
     "imuiDisableOnSubmit": false, 
+    "imuiMessageDialog": false, 
     "imuiResetForm": false, 
     "imuiShowErrorMessage": false, 
     "imuiShowSuccessMessage": false, 
     "imuiShowWarningMessage": false, 
     "imuiTransitionToErrorPage": false, 
     "imuiValidate": false, 
+    "lookAhead": false, 
     "workflowOpenPage": false, 
     "workflowOpenPage4Sp": false
   }
