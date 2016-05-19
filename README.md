@@ -8,21 +8,49 @@ intra-mart開発のための[ESLint](http://eslint.org/)設定
 
 ## インストールと使用
 
-この設定は[ESLint Shareable Configs](http://eslint.org/docs/developer-guide/shareable-configs)の仕組みで提供されています。
+このルール定義は[ESLint Shareable Configs](http://eslint.org/docs/developer-guide/shareable-configs)の仕組みで提供されています。
 
-ルールを使用するために、`npm`でインストールしてください。
+**以下で記述するeslintとeslint-config-airbnb-baseのバージョンは、本プロジェクトのpackage.json内に記述されるものと合わせてください**
+
+### グローバルインストール
+
+コマンドライン上での`eslint`コマンドやエディタのプラグイン等の外部連携を行う場合、パッケージをグローバルインストールする必要があります。
 
 ```
-npm install -g eslint-config-imart
+npm install -g eslint@=2.9.0 eslint-config-airbnb-base@=3.0.1 eslint-config-imart
 ```
 
-ルールはプロジェクトルートの`.eslintrc`に以下の記載を追加することで適用できます。
+ルールはホームディレクトリの`.eslintrc`に以下の記載を追加することで適用できます。
 
 ```json
 {
   "extends": "imart"
 }
 ```
+
+### ローカルインストール
+
+プロジェクト単位でルール定義やESLintのバージョンを固定して使用する場合、パッケージをローカルインストールする必要があります。
+
+まずpackage.jsonに以下のように定義します。
+
+```json
+{
+  "devDependencies": {
+    "eslint": "2.9.0",
+    "eslint-config-airbnb-base": "3.0.1",
+    "eslint-config-imart": "^0.1.3"
+  }
+}
+```
+
+その後、次のコマンドでインストールします。
+
+```
+npm install
+```
+
+`eslint`コマンドは`node_modules/.bin/eslint`に作成されます。
 
 ## intra-mart API定義
 
@@ -94,7 +122,7 @@ IWPの場合:
 }
 ```
 
-## ESLintの使い方について
+## ルールの階層構造
 
 ESLintでは、`.eslintrc`をlint対象ファイルの位置からファイルシステムを上へ再帰的に適用します: [Configuration Cascading and Hierarchy](http://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy)
 
