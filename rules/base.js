@@ -1,12 +1,4 @@
 module.exports = {
-  plugins: [
-    'lodash'
-  ],
-
-  extends: [
-    'plugin:lodash/recommended'
-  ],
-
   rules: {
     // ES6
     'no-var': 0,                  // http://eslint.org/docs/rules/no-var

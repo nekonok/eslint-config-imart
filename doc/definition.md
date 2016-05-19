@@ -1,4 +1,4 @@
-# intra-mart CSI JavaScript コーディング規約
+# ESLint Configuration for intra-mart
 
 ## はじめに
 
@@ -40,13 +40,17 @@ intra-mart開発に合わせて、主に以下の点に関してルールの変�
 * [ESLint推奨ルール](http://eslint.org/docs/rules)の追加(`eslint:recommended`)
 * 見栄えの統一
 
-## 変更内容
+### lodashについて
 
-Note: 以下の一覧は`npm run markdown`によって自動生成されています。手動での編集はしないでください。
+iAPの場合、lodash version 4.0以上を採用する前提です。
+
+## 変更内容
 
 * [Airbnbとの相違点](./diff.md)
 * [未採用のルール](./exclude.md)
 * [すべてのルール](./all-rules.md)
+
+Note: ドキュメントは`npm run markdown`によって自動生成されています。手動での編集はしないでください。
 
 ### 特筆すべき変更内容
 

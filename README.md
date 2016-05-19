@@ -16,7 +16,7 @@ intra-mart開発のための[ESLint](http://eslint.org/)設定
 npm install -g eslint-config-imart
 ```
 
-ルールは`~/.eslintrc`に以下の記載を追加することで適用できます。
+ルールはプロジェクトルートの`.eslintrc`に以下の記載を追加することで適用できます。
 
 ```json
 {
@@ -49,6 +49,50 @@ ESLintでは、未定義のグローバルオブジェクトへの参照はエ�
 それぞれの変数間を`-`で繋ぎ、各変数内の単語区切りには`_`を使います。すべて小文字です。
 
 どのようなAPI定義があるかは[globalsディレクトリ](./globals)を参照してください。
+
+## lodash
+
+標準ライブラリとして[lodash](https://lodash.com/)を利用することを推奨しています。
+
+iAPではlodash version 4系、IWPでは3系を利用してください。
+
+その際、lodashの使用スタイルを統一するため、以下の設定をすることを推奨します。
+
+### インストール
+
+```
+npm i -D eslint-plugin-lodash
+```
+
+### .eslintrc
+
+iAPの場合:
+
+```json
+{
+  "plugins": [
+    "lodash"
+  ],
+  "extends": [
+    "imart",
+    "plugin:lodash/recommended"
+  ]
+}
+```
+
+IWPの場合:
+
+```json
+{
+  "plugins": [
+    "lodash"
+  ],
+  "extends": [
+    "imart",
+    "plugin:lodash/v3"
+  ]
+}
+```
 
 ## ESLintの使い方について
 
