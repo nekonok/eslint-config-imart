@@ -1,27 +1,36 @@
 module.exports = {
   rules: {
     // ES6
-    'arrow-parens': 0,           // http://eslint.org/docs/rules/arrow-parens
-    'arrow-spacing': 0,          // http://eslint.org/docs/rules/arrow-spacing
-    'constructor-super': 0,      // http://eslint.org/docs/rules/constructor-super
-    'generator-star-spacing': 0, // http://eslint.org/docs/rules/generator-star-spacing
-    'no-class-assign': 0,        // http://eslint.org/docs/rules/no-class-assign
-    'no-const-assign': 0,        // http://eslint.org/docs/rules/no-const-assign
-    'no-dupe-class-members': 0,  // http://eslint.org/docs/rules/no-dupe-class-members
-    'no-this-before-super': 0,   // http://eslint.org/docs/rules/no-this-before-super
-    'object-shorthand': 0,       // http://eslint.org/docs/rules/object-shorthand
-    'prefer-arrow-callback': 0,  // http://eslint.org/docs/rules/prefer-arrow-callback
-    'prefer-spread': 0,          // http://eslint.org/docs/rules/prefer-spread
-    'prefer-reflect': 0,         // http://eslint.org/docs/rules/prefer-reflect
-    'prefer-template': 0,        // http://eslint.org/docs/rules/prefer-template
-    'require-yield': 0,          // http://eslint.org/docs/rules/require-yield
-    'no-empty-pattern': 0,       // http://eslint.org/docs/rules/no-empty-pattern
-    'no-restricted-globals': 0,  // http://eslint.org/docs/rules/no-restricted-globals
-    'no-restricted-imports': 0,  // http://eslint.org/docs/rules/no-restricted-imports
-    'prefer-rest-params': 0,     // http://eslint.org/docs/rules/prefer-rest-params
-    'sort-imports': 0,           // http://eslint.org/docs/rules/sort-imports
-    'template-curly-spacing': 0, // http://eslint.org/docs/rules/template-curly-spacing
+    'arrow-body-style': 0,        // http://eslint.org/docs/rules/arrow-body-style
+    'arrow-parens': 0,            // http://eslint.org/docs/rules/arrow-parens
+    'arrow-spacing': 0,           // http://eslint.org/docs/rules/arrow-spacing
+    'constructor-super': 0,       // http://eslint.org/docs/rules/constructor-super
+    'generator-star-spacing': 0,  // http://eslint.org/docs/rules/generator-star-spacing
+    'no-class-assign': 0,         // http://eslint.org/docs/rules/no-class-assign
+    'no-confusing-arrow': 0,      // http://eslint.org/docs/rules/no-confusing-arrow
+    'no-const-assign': 0,         // http://eslint.org/docs/rules/no-const-assign
+    'no-dupe-class-members': 0,   // http://eslint.org/docs/rules/no-dupe-class-members
+    'no-duplicate-imports': 0,    // http://eslint.org/docs/rules/no-duplicate-imports
+    'no-new-symbol': 0,           // http://eslint.org/docs/rules/no-new-symbol
+    'no-restricted-imports': 0,   // http://eslint.org/docs/rules/no-restricted-imports
+    'no-this-before-super': 0,    // http://eslint.org/docs/rules/no-this-before-super
+    'no-useless-computed-key': 0, // http://eslint.org/docs/rules/no-useless-computed-key
+    'no-useless-constructor': 0,  // http://eslint.org/docs/rules/no-useless-constructor
+    'no-var': 0,                  // http://eslint.org/docs/rules/no-var
+    'object-shorthand': 0,        // http://eslint.org/docs/rules/object-shorthand
+    'prefer-arrow-callback': 0,   // http://eslint.org/docs/rules/prefer-arrow-callback
+    'prefer-const': 0,            // http://eslint.org/docs/rules/prefer-const
+    'prefer-reflect': 0,          // http://eslint.org/docs/rules/prefer-reflect
+    'prefer-rest-params': 0,      // http://eslint.org/docs/rules/prefer-rest-params
+    'prefer-spread': 0,           // http://eslint.org/docs/rules/prefer-spread
+    'prefer-template': 0,         // http://eslint.org/docs/rules/prefer-template
+    'require-yield': 0,           // http://eslint.org/docs/rules/require-yield
+    'sort-imports': 0,            // http://eslint.org/docs/rules/sort-imports
+    'template-curly-spacing': 0,  // http://eslint.org/docs/rules/template-curly-spacing
+    'yield-star-spacing': 0,      // http://eslint.org/docs/rules/yield-star-spacing
 
+    // Variables
+    'no-restricted-globals': 0,   // http://eslint.org/docs/rules/no-restricted-globals
 
     // Node.js and CommonJS
     'callback-return': 0,        // http://eslint.org/docs/rules/callback-return

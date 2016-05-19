@@ -1,15 +1,5 @@
 module.exports = {
   rules: {
-    // ES6
-    'no-var': 0,                  // http://eslint.org/docs/rules/no-var
-    'prefer-const': 0,            // http://eslint.org/docs/rules/prefer-const
-    'no-confusing-arrow': 2,      // http://eslint.org/docs/rules/no-confusing-arrow
-    'no-duplicate-imports': 2,    // http://eslint.org/docs/rules/no-duplicate-imports
-    'no-new-symbol': 2,           // http://eslint.org/docs/rules/no-new-symbol
-    'no-useless-computed-key': 2, // http://eslint.org/docs/rules/no-useless-computed-key
-    'no-useless-constructor': 2,  // http://eslint.org/docs/rules/no-useless-constructor
-    'arrow-body-style': 2,        // http://eslint.org/docs/rules/arrow-body-style
-
     // Variables
     'no-catch-shadow': 2,   // http://eslint.org/docs/rules/no-catch-shadow
     'no-delete-var': 2,     // http://eslint.org/docs/rules/no-delete-var
@@ -38,6 +28,7 @@ module.exports = {
     // Best practices
     'curly': [2, 'all'],             // http://eslint.org/docs/rules/curly
     'dot-location': [2, 'property'], // http://eslint.org/docs/rules/dot-location
+    'no-empty-pattern': 1,           // http://eslint.org/docs/rules/no-empty-pattern
     'no-implicit-coercion': 2,       // http://eslint.org/docs/rules/no-implicit-coercion
     'no-iterator': 2,                // http://eslint.org/docs/rules/no-iterator
     'no-labels': [1, {               // http://eslint.org/docs/rules/no-labels
@@ -46,7 +37,6 @@ module.exports = {
     }],
     'no-negated-condition': 2,       // http://eslint.org/docs/rules/no-negated-condition
     'strict': [2, 'function'],       // http://eslint.org/docs/rules/strict
-    'yield-star-spacing': 2,         // http://eslint.org/docs/rules/yield-star-spacing
 
     // Style
     'array-bracket-spacing': [2, 'never'],     // http://eslint.org/docs/rules/array-bracket-spacing
