@@ -1,4 +1,12 @@
 module.exports = {
+  plugins: [
+    'lodash'
+  ],
+
+  extends: [
+    'plugin:lodash/recommended'
+  ],
+
   rules: {
     // ES6
     'no-var': 0,                  // http://eslint.org/docs/rules/no-var
@@ -29,8 +37,8 @@ module.exports = {
     'no-negated-in-lhs': 2,        // http://eslint.org/docs/rules/no-negated-in-lhs
     'no-regex-spaces': 2,          // http://eslint.org/docs/rules/no-regex-spaces
     'valid-jsdoc': [2, {           // http://eslint.org/docs/rules/valid-jsdoc
-      'requireParamDescription':   false,
-      'requireReturnDescription':  false
+      'requireParamDescription': false,
+      'requireReturnDescription': false
     }],
     'valid-typeof': 2,             // http://eslint.org/docs/rules/valid-typeof
     'no-unexpected-multiline': 2,  // http://eslint.org/docs/rules/no-unexpected-multiline
@@ -41,8 +49,8 @@ module.exports = {
     'no-implicit-coercion': 2,       // http://eslint.org/docs/rules/no-implicit-coercion
     'no-iterator': 2,                // http://eslint.org/docs/rules/no-iterator
     'no-labels': [1, {               // http://eslint.org/docs/rules/no-labels
-      'allowLoop':                   true,
-      'allowSwitch':                 true
+      'allowLoop': true,
+      'allowSwitch': true
     }],
     'no-negated-condition': 2,       // http://eslint.org/docs/rules/no-negated-condition
     'strict': [2, 'function'],       // http://eslint.org/docs/rules/strict
