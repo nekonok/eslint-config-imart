@@ -2,12 +2,12 @@
 
 ## Versions
 
-* eslint: 1.4.3
-* eslint-config-airbnb: 0.0.8
+* eslint: 2.9.0
+* eslint-config-airbnb: 3.0.1
 
 ## Number of rules
 
-* exclude: 60
+* exclude: 65
 
 ### Excluded Rules
 
@@ -99,6 +99,36 @@ Set to: `0`
 #### no-empty-pattern
 
 [http://eslint.org/docs/rules/no-empty-pattern](http://eslint.org/docs/rules/no-empty-pattern)
+
+Set to: `0`
+
+#### no-restricted-globals
+
+[http://eslint.org/docs/rules/no-restricted-globals](http://eslint.org/docs/rules/no-restricted-globals)
+
+Set to: `0`
+
+#### no-restricted-imports
+
+[http://eslint.org/docs/rules/no-restricted-imports](http://eslint.org/docs/rules/no-restricted-imports)
+
+Set to: `0`
+
+#### prefer-rest-params
+
+[http://eslint.org/docs/rules/prefer-rest-params](http://eslint.org/docs/rules/prefer-rest-params)
+
+Set to: `0`
+
+#### sort-imports
+
+[http://eslint.org/docs/rules/sort-imports](http://eslint.org/docs/rules/sort-imports)
+
+Set to: `0`
+
+#### template-curly-spacing
+
+[http://eslint.org/docs/rules/template-curly-spacing](http://eslint.org/docs/rules/template-curly-spacing)
 
 Set to: `0`
 
