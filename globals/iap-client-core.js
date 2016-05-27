@@ -1,5 +1,6 @@
 module.exports = {
   "globals": {
+    "Packages": false, 
     "imspAddValidationRule": false, 
     "imspAjaxSend": false, 
     "imspAjaxSubmit": false, 
