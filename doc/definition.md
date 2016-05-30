@@ -66,3 +66,7 @@ Note: ドキュメントは`npm run markdown`によって自動生成されて�
 * `@returns {undefined}`
 
 引数および戻り値の説明については、型名や変数名から自明な場合は必要ありません。そうでない場合は記載してください。
+
+#### strict
+
+strictモードを使用します。[Strict モード - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Strict_mode)
