@@ -2,55 +2,64 @@
 
 intra-mart開発のための[ESLint](http://eslint.org/)設定
 
-## ルール内容
+## 本リポジトリについて
 
-[ルール内容はこちら](./doc/definition.md)
+* Airbnbの[JavaScript Style Guide](https://github.com/airbnb/javascript)をベースに、最小限のルール変更を追加
+* intra-mart スクリプト開発API定義を追加
+
+### 特筆すべき変更内容
+
+#### valid-jsdoc, require-jsdoc
+
+[JSDoc](http://usejsdoc.org/)を記述することを強制します。本ルールでは、各関数について以下の記載を求めます。
+
+* 関数についての説明
+* すべての名前付き引数の型(順番も含めて正しいこと)
+* 戻り値の型
+
+特に、何も返さない関数についても戻り値の型を記載する必要があります。JavaScriptは`return`に遭遇しなかった場合や`return`文に何も与えなかった場合、`undefined`を返却するため、次のように記載すると正しいと判定されます。
+
+* `@returns {void}`
+* `@returns {undefined}`
+
+引数および戻り値の説明については、型名や変数名から自明な場合は必要ありません。そうでない場合は記載してください。
+
+#### strict
+
+strictモードを使用します。[Strict モード - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Strict_mode)
 
 ## インストールと使用
 
 このルール定義は[ESLint Shareable Configs](http://eslint.org/docs/developer-guide/shareable-configs)の仕組みで提供されています。
 
-**以下で記述するeslintとeslint-config-airbnb-baseのバージョンは、本プロジェクトのpackage.json内に記述されるものと合わせてください**
+### eslint-config-airbnb-base/legacy のインストール
 
-### グローバルインストール
+[eslint\-config\-airbnb\-base](https://www.npmjs.com/package/eslint-config-airbnb-base) の記載に従ってインストールしてください。
 
-コマンドライン上での`eslint`コマンドやエディタのプラグイン等の外部連携を行う場合、パッケージをグローバルインストールする必要があります。
-
-```
-npm install -g eslint@=2.9.0 eslint-config-airbnb-base@=3.0.1 eslint-config-imart
-```
-
-ルールはホームディレクトリの`.eslintrc`に以下の記載を追加することで適用できます。
-
-```json
-{
-  "extends": "imart"
-}
-```
-
-### ローカルインストール
-
-プロジェクト単位でルール定義やESLintのバージョンを固定して使用する場合、パッケージをローカルインストールする必要があります。
-
-まずpackage.jsonに以下のように定義します。
-
-```json
-{
-  "devDependencies": {
-    "eslint": "2.9.0",
-    "eslint-config-airbnb-base": "3.0.1",
-    "eslint-config-imart": "^0.1.3"
-  }
-}
-```
-
-その後、次のコマンドでインストールします。
+### eslint-config-imart のインストール
 
 ```
-npm install
+npm i -D eslint-config-imart
 ```
 
 `eslint`コマンドは`node_modules/.bin/eslint`に作成されます。
+
+### ルール定義
+
+プロジェクトのルートディレクトリに`.eslintrc`ファイルを以下のように作成します。
+
+```json
+{
+  "root": true,
+  "extends": [
+    "airbnb-base/legacy",
+    "imart"
+  ],
+  "globals": {
+    "require": false
+  }
+}
+```
 
 ## intra-mart API定義
 
@@ -80,57 +89,14 @@ ESLintでは、未定義のグローバルオブジェクトへの参照はエ�
 
 ## ES6
 
-node.jsモジュールを書く場合等、ES6の機能が必要な場合は以下を利用してください。
+node.jsモジュールを書く場合等、ES6の機能が必要な場合は`airbnb-base`を利用してください。
 
 ```
 {
   "extends": [
-    "imart/es6"
-  ]
-}
-```
-
-## lodash
-
-標準ライブラリとして[lodash](https://lodash.com/)を利用することを推奨しています。
-
-iAPではlodash version 4系、IWPでは3系を利用してください。
-
-その際、lodashの使用スタイルを統一するため、以下の設定をすることを推奨します。
-
-### インストール
-
-```
-npm i -D eslint-plugin-lodash
-```
-
-### .eslintrc
-
-iAPの場合:
-
-```json
-{
-  "plugins": [
-    "lodash"
+    "airbnb-base",
+    "imart"
   ],
-  "extends": [
-    "imart",
-    "plugin:lodash/recommended"
-  ]
-}
-```
-
-IWPの場合:
-
-```json
-{
-  "plugins": [
-    "lodash"
-  ],
-  "extends": [
-    "imart",
-    "plugin:lodash/v3"
-  ]
 }
 ```
 
@@ -180,28 +146,6 @@ npm test
 ### 修正に関する議論
 
 あるルールを変更する場合、本リポジトリのissueにて議論を行ってください。
-
-### ESLintおよびAirbnbへの追従
-
-`package.json`に依存する`eslint`および`eslint-config-airbnb`のバージョンが記載されています。
-
-これらが更新されているかチェックするためには`npm-check-updates`を使います。次のようにインストールして実行してください:
-
-```
-npm i -g npm-check-updates
-ncu
-```
-
-更新が必要なパッケージが検知された場合、次のようにしてアップデートしてください:
-
-```
-ncu -u
-npm install
-```
-
-更新した場合は、必ずテストを実行してください。
-
-ESLintにルールが追加された場合や、Airbnbのルールに更新があった場合、テストに失敗します。そのルールについての議論を行ってください。採用する場合は`rules/base.js`に、採用しない場合は`rules/exclude.js`に追記します。
 
 ### 定義済みコマンド
 

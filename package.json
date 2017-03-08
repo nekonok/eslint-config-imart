@@ -1,11 +1,10 @@
 {
   "name": "eslint-config-imart",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Definition of ESLint rules and intra-mart JavaScript API",
   "main": "index.js",
   "scripts": {
     "build": "node ./lib/build-globals.js",
-    "markdown": "node ./lib/build-markdown.js",
     "test": "mocha"
   },
   "repository": {
@@ -22,10 +21,6 @@
   },
   "engines": {
     "node": ">= 4.0.0"
-  },
-  "peerDependencies": {
-    "eslint": "2.9.0",
-    "eslint-config-airbnb-base": "3.0.1"
   },
   "devDependencies": {
     "q": "^1.4.1",
