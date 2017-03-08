@@ -3,6 +3,7 @@ module.exports = {
     "BisApplyManager": false, 
     "BisProcessManager": false, 
     "BisPullBackManager": false, 
-    "BisTempSaveManager": false
+    "BisTempSaveManager": false, 
+    "DesignDocumentExporter": false
   }
 };
