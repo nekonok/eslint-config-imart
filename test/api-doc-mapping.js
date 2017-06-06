@@ -11,6 +11,7 @@ const _ = require('lodash');
 const mapping = require('../lib/im-api-doc-mapping');
 
 describe('target API doc definitions', () => {
+  'use strict';
   var targets = _(mapping.parsers).map('targets').flatten().value();
 
   it('should contain certain properties', () => {
