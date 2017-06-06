@@ -14,7 +14,7 @@
   "keywords": [
     "eslintconfig"
   ],
-  "author": "kouno.kenji",
+  "author": "nekonok",
   "license": "MIT",
   "config": {
     "engine-strict": true
