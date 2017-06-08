@@ -1,5 +1,5 @@
 module.exports = {
-  "globals": {
-    "workflowOpenPage": false
+  globals: {
+    workflowOpenPage: false
   }
 };

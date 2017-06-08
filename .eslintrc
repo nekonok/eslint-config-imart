@@ -1,6 +1,10 @@
 // vim: set ft=json ff=unix:
 {
-  "extends": "imart",
+  "extends": [
+    "airbnb-base",
+    "./index.js",
+    "prettier"
+  ],
   "env": {
     "node": true,
     "es6": true,

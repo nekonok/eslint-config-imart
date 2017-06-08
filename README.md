@@ -1,15 +1,20 @@
 # eslint-config-imart
 
+[![CircleCI](https://circleci.com/gh/nekonok/eslint-config-imart.svg?style=svg)](https://circleci.com/gh/nekonok/eslint-config-imart)
+[![npm](https://img.shields.io/npm/v/eslint-config-imart.svg)](https://www.npmjs.com/package/eslint-config-imart)
+[![LICENSE](https://img.shields.io/npm/l/eslint-config-imart.svg)](LICENSE.txt)
+
 intra-mart開発のための[ESLint](http://eslint.org/)設定
 
 ## 本リポジトリについて
 
 * Airbnbの[JavaScript Style Guide](https://github.com/airbnb/javascript)をベースに、最小限のルール変更を追加
+* [prettier/prettier: Prettier is an opinionated code formatter\.](https://github.com/prettier/prettier) を使う
 * intra-mart スクリプト開発API定義を追加
 
-### 特筆すべき変更内容
+## ルール
 
-#### valid-jsdoc, require-jsdoc
+### valid-jsdoc, require-jsdoc
 
 [JSDoc](http://usejsdoc.org/)を記述することを強制します。本ルールでは、各関数について以下の記載を求めます。
 
@@ -24,25 +29,21 @@ intra-mart開発のための[ESLint](http://eslint.org/)設定
 
 引数および戻り値の説明については、型名や変数名から自明な場合は必要ありません。そうでない場合は記載してください。
 
-#### strict
+### strict
 
 strictモードを使用します。[Strict モード - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Strict_mode)
 
-## インストールと使用
+## 使い方
 
 このルール定義は[ESLint Shareable Configs](http://eslint.org/docs/developer-guide/shareable-configs)の仕組みで提供されています。
 
-### eslint-config-airbnb-base/legacy のインストール
+### インストール
 
-[eslint\-config\-airbnb\-base](https://www.npmjs.com/package/eslint-config-airbnb-base) の記載に従ってインストールしてください。
-
-### eslint-config-imart のインストール
-
-```
-npm i -D eslint-config-imart
+```sh
+npm i -D eslint eslint-config-airbnb-base eslint-plugin-import eslint-config-imart
 ```
 
-`eslint`コマンドは`node_modules/.bin/eslint`に作成されます。
+See: [eslint\-config\-airbnb\-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
 
 ### ルール定義
 
@@ -53,7 +54,8 @@ npm i -D eslint-config-imart
   "root": true,
   "extends": [
     "airbnb-base/legacy",
-    "imart"
+    "imart",
+    "prettier"
   ],
   "globals": {
     "require": false
@@ -61,7 +63,15 @@ npm i -D eslint-config-imart
 }
 ```
 
-## intra-mart API定義
+### 実行
+
+```sh
+./node_modules/.bin/eslint .
+```
+
+## eslintrc
+
+### intra-mart API定義
 
 ESLintでは、未定義のグローバルオブジェクトへの参照はエラーとなります。したがって、intra-martのAPIオブジェクトはすべて`globals`として定義される必要があります。
 
@@ -72,9 +82,11 @@ ESLintでは、未定義のグローバルオブジェクトへの参照はエ�
 ```json
 {
   "extends": [
+    "airbnb-base/legacy",
     "imart",
     "imart/globals/iap-server-core",
-    "imart/globals/iap-client-core"
+    "imart/globals/iap-client-core",
+    "prettier"
   ]
 }
 ```
@@ -87,7 +99,7 @@ ESLintでは、未定義のグローバルオブジェクトへの参照はエ�
 
 どのようなAPI定義があるかは[globalsディレクトリ](./globals)を参照してください。
 
-## ES6
+### ES6
 
 node.jsモジュールを書く場合等、ES6の機能が必要な場合は`airbnb-base`を利用してください。
 
@@ -95,12 +107,13 @@ node.jsモジュールを書く場合等、ES6の機能が必要な場合は`air
 {
   "extends": [
     "airbnb-base",
-    "imart"
+    "imart",
+    "prettier"
   ],
 }
 ```
 
-## ルールの階層構造
+### ルールの階層構造
 
 ESLintでは、`.eslintrc`をlint対象ファイルの位置からファイルシステムを上へ再帰的に適用します: [Configuration Cascading and Hierarchy](http://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy)
 
@@ -111,7 +124,11 @@ ESLintでは、`.eslintrc`をlint対象ファイルの位置からファイル�
 ```json
 {
   "root": true,
-  "extends": "imart"
+  "extends": [
+    "airbnb-base",
+    "imart",
+    "prettier"
+  ]
 }
 ```
 
@@ -119,7 +136,7 @@ ESLintでは、`.eslintrc`をlint対象ファイルの位置からファイル�
 
 ```json
 {
-  "extends": "imart/globals/iap-server-core"
+  "extends": ["imart/globals/iap-server-core"]
 }
 ```
 
@@ -127,7 +144,7 @@ ESLintでは、`.eslintrc`をlint対象ファイルの位置からファイル�
 
 ```json
 {
-  "extends": "imart/globals/iap-client-core"
+  "extends": ["imart/globals/iap-client-core"]
 }
 ```
 
@@ -155,7 +172,6 @@ npm test
 
 * `npm test`: ルールについてのテストを実行します
 * `npm run build`: intra-mart APIのグローバル定義を生成します
-* `npm run markdown`: 変更内容一覧のドキュメントを生成します
 
 ## FAQ
 
@@ -171,4 +187,3 @@ function init(request) {
 ```
 
 ※注: `"env": { "node": true }`の環境下では`exported`は機能ません。node.jsでは変数は常にスクリプトローカルであるためです。
-

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./lib/build-globals.js",
-    "test": "mocha"
+    "test": "prettier --write **/*.js **/*.css && eslint --fix . && mocha",
+    "precommit": "npm test"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,19 @@
     "node": ">= 4.0.0"
   },
   "devDependencies": {
-    "q": "^1.4.1",
-    "lodash": "^4.12.0",
-    "mocha": "^2.3.2",
-    "chai": "^3.2.0",
-    "chai-as-promised": "^5.1.0",
+    "chai": "^4.0.2",
+    "chai-as-promised": "^6.0.0",
     "chai-things": "^0.2.0",
-    "cheerio-httpcli": "^0.6.8"
-  }
+    "cheerio-httpcli": "^0.7.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-config-prettier": "^2.1.1",
+    "eslint-plugin-import": "^2.3.0",
+    "husky": "^0.13.4",
+    "lodash": "^4.12.0",
+    "mocha": "^3.4.2",
+    "prettier": "^1.4.4",
+    "q": "^1.4.1"
+  },
+  "dependencies": {}
 }
