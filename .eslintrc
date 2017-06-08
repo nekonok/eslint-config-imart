@@ -2,7 +2,8 @@
 {
   "extends": [
     "airbnb-base",
-    "./index.js"
+    "./index.js",
+    "prettier"
   ],
   "env": {
     "node": true,
