@@ -1,10 +1,10 @@
 // test suite
 const chai = require('chai');
-let expect;
 chai.use(require('chai-as-promised')); // for promise
 chai.use(require('chai-things')); // for array asserting
+
 chai.config.truncateThreshold = 0;  // disable truncating
-expect = chai.expect;
+const expect = chai.expect;
 
 // requiring
 const _ = require('lodash');
