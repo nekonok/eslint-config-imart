@@ -1,5 +1,6 @@
 # eslint-config-imart
 
+[![CircleCI](https://circleci.com/gh/nekonok/eslint-config-imart.svg?style=svg)](https://circleci.com/gh/nekonok/eslint-config-imart)
 [![npm](https://img.shields.io/npm/v/eslint-config-imart.svg)](https://www.npmjs.com/package/eslint-config-imart)
 [![LICENSE](https://img.shields.io/npm/l/eslint-config-imart.svg)](LICENSE.txt)
 
