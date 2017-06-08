@@ -1,5 +1,8 @@
 # eslint-config-imart
 
+[![npm](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/eslint-config-imart)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
+
 intra-mart開発のための[ESLint](http://eslint.org/)設定
 
 ## 本リポジトリについて
