@@ -1,9 +1,9 @@
 module.exports = {
-  "globals": {
-    "BisApplyManager": false, 
-    "BisProcessManager": false, 
-    "BisPullBackManager": false, 
-    "BisTempSaveManager": false, 
-    "DesignDocumentExporter": false
+  globals: {
+    BisApplyManager: false,
+    BisProcessManager: false,
+    BisPullBackManager: false,
+    BisTempSaveManager: false,
+    DesignDocumentExporter: false
   }
 };

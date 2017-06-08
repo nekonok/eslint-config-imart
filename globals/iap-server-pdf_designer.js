@@ -1,7 +1,7 @@
 module.exports = {
-  "globals": {
-    "IOCela": false, 
-    "IODoc": false, 
-    "IOIntegration": false
+  globals: {
+    IOCela: false,
+    IODoc: false,
+    IOIntegration: false
   }
 };

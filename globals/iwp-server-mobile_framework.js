@@ -1,5 +1,5 @@
 module.exports = {
-  "globals": {
-    "spAlert": false
+  globals: {
+    spAlert: false
   }
 };
