@@ -11,10 +11,6 @@ module.exports = {
     // Airbnb通常とlegacyでルールが異なるためlegacyに合わせる
     'comma-dangle': [2, 'never'],
 
-    // 改行コードのチェックはgitattributesとEditorConfigで行うため無効化
-    // ESLintではファイル単位の細かい指定ができない
-    'linebreak-style': 0,
-
     // JSDocの記述を強制
     // http://eslint.org/docs/rules/require-jsdoc
     'require-jsdoc': 2,
