@@ -1,11 +1,11 @@
 {
   "name": "eslint-config-imart",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Definition of ESLint rules and intra-mart JavaScript API",
   "main": "index.js",
   "scripts": {
     "build": "node ./lib/build-globals.js",
-    "test": "prettier --write **/*.js **/*.css && eslint --fix . && mocha",
+    "test": "prettier --write **/*.css && eslint --fix . && mocha",
     "precommit": "npm test"
   },
   "repository": {
@@ -32,6 +32,7 @@
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-config-prettier": "^2.1.1",
     "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.1",
     "husky": "^0.13.4",
     "lodash": "^4.12.0",
     "mocha": "^3.4.2",

@@ -1,10 +1,5 @@
 // vim: set ft=json ff=unix:
 {
-  "extends": [
-    "airbnb-base",
-    "./index.js",
-    "prettier"
-  ],
   "env": {
     "node": true,
     "es6": true,
@@ -12,5 +7,16 @@
   },
   "ecmaFeatures": {
     "modules": false
+  },
+  "extends": [
+    "airbnb-base",
+    "./index.js",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error"
   }
 }
