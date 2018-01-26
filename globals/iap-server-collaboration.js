@@ -1,5 +1,6 @@
 module.exports = {
   globals: {
+    ScheduleConnector: false,
     iac_addressbook: false,
     iac_announce: false,
     iac_caldav_schedule: false,
