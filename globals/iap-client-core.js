@@ -1,6 +1,10 @@
 module.exports = {
   globals: {
-    Packages: false,
+    ImBigDecimal: false,
+    ImDate: false,
+    ImDecimalFormatter: false,
+    ImMathContext: false,
+    ImRoundingMode: false,
     imspAddValidationRule: false,
     imspAjaxSend: false,
     imspAjaxSubmit: false,
@@ -18,7 +22,6 @@ module.exports = {
     imuiAlert: false,
     imuiConfirm: false,
     imuiDisableOnSubmit: false,
-    imuiMessageDialog: false,
     imuiResetForm: false,
     imuiShowErrorMessage: false,
     imuiShowSuccessMessage: false,
