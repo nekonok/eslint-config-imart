@@ -4,7 +4,7 @@ chai.use(require("chai-as-promised")); // for promise
 chai.use(require("chai-things")); // for array asserting
 
 chai.config.truncateThreshold = 0; // disable truncating
-const expect = chai.expect;
+const { expect } = chai;
 
 // requiring
 const _ = require("lodash");
