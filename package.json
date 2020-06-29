@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-imart",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Definition of ESLint rules and intra-mart JavaScript API",
   "main": "index.js",
   "scripts": {
